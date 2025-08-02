@@ -69,3 +69,9 @@
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+.hero-btn:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
