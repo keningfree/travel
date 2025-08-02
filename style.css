@@ -4,12 +4,9 @@
     position: fixed;
     width: 100%;
     top: 0;
-    left: 0;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
-    box-sizing: border-box;
-    padding: 0 30px;
 }
 
 .logo {
@@ -18,7 +15,6 @@
     font-size: 1.5rem;
     font-weight: 700;
     color: #2c5aa0;
-    gap: 10px;
 }
 
 .nav-menu {
@@ -37,4 +33,35 @@
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(44, 90, 160, 0.6), rgba(7, 175, 213, 0.3)),
+                url('images/hero-bg.jpg') center/cover;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-btn {
+    background: #ff6b6b;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
