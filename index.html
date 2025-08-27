@@ -29,7 +29,7 @@
         <p>與我們一起踏上旅程，發現未知的風景和文化。</p>
         <button class="hero-btn">開始探索</button>
     </section>
-    <main>
+    <main id="main-content">
       <div class="container">
         <div class="content-wrapper">
           <div class="posts">
@@ -137,6 +137,12 @@
                 behavior: 'smooth'
             });
         });
+
+        function scrollToContent() {
+            document.getElementById('main-content').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
     </script>
 </body>
 </html>
