@@ -144,19 +144,22 @@
             });
         }
 
-        const hour = new Date().getHours();
-        const greetingElement = document.querySelector('.hero h1');
-        
-        if (hour < 6) {
-            greetingElement.textContent = '夜深了，準備下次旅行吧';
-        } else if (hour < 12) {
-            greetingElement.textContent = '早安！開始新的旅程';
-        } else if (hour < 18) {
-            greetingElement.textContent = '午安！探索世界的美麗';
-        } else {
-            greetingElement.textContent = '晚安！回味今日的美景';
+        function greeting() {
+            const hour = new Date().getHours();
+            const greetingElement = document.querySelector('.hero h1');
+            
+            if (hour < 6) {
+                greetingElement.textContent = '夜深了，準備下次旅行吧';
+            } else if (hour < 12) {
+                greetingElement.textContent = '早安！開始新的旅程';
+            } else if (hour < 18) {
+                greetingElement.textContent = '午安！探索世界的美麗';
+            } else {
+                greetingElement.textContent = '晚安！回味今日的美景';
+            }
         }
 
+        greeting();
     </script>
 </body>
 </html>
