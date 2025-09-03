@@ -145,6 +145,19 @@
             e.preventDefault();
             $('.tag-link').removeClass('active');
             $(this).addClass('active');
+
+            let tagText = $(this).text();
+            if (tagText === '全部') {
+                $('.post-card').show();
+            } else {
+                $('.post-card').hide().filter(function() {
+                    var tags = $(this).find('.post-tags .tag').map(function() {
+                        return $(this).text();
+                    }).get();
+                    
+                    return tags.includes(tagText);
+                }).show();
+            }
         });
     </script>
 </body>
