@@ -140,6 +140,12 @@
                 </article>
             `;
         }
+
+        $('.tag-link').click(function(e){
+            e.preventDefault();
+            $('.tag-link').removeClass('active');
+            $(this).addClass('active');
+        });
     </script>
 </body>
 </html>
