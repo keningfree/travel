@@ -115,13 +115,7 @@
 
         function renderPosts(posts) {
             const container = document.querySelector('.posts-grid');
-            // container.innerHTML = posts.map(createPostCard).join('');
-
-            posts.forEach(post => {
-                const article = createPostCard(post);
-                container.appendChild(article);
-            });
-
+            container.innerHTML = posts.map(createPostCard).join('');
         }
 
         function createPostCard(post) {
