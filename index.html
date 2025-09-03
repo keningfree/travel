@@ -147,7 +147,7 @@
             $(this).addClass('active');
 
             let tagText = $(this).text();
-            if (tagText === '全部') {
+            if (tagText.indexOf('全部') !== -1) {
                 $('.post-card').show();
             } else {
                 $('.post-card').hide().filter(function() {
@@ -155,7 +155,13 @@
                         return $(this).text();
                     }).get();
                     
-                    return tags.includes(tagText);
+                    // return tags.includes(tagText);
+                    // tagText.indexOf()
+
+                    for(let i = 0; i < tags.length; i++) {
+                        if (tagText.indexOf(tags[i]) !== -1)
+                            return true;
+                    }
                 }).show();
             }
         });
