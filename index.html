@@ -165,6 +165,15 @@
                 }).show();
             }
         });
+
+        $.ajax({
+            url: 'tags.json',
+            method: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                console.log('成功：', data);
+            }
+        });
     </script>
 </body>
 </html>
