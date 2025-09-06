@@ -166,7 +166,7 @@
             dataType: 'json',
             success: function(data) {
                 let html = '';
-                $.each(data, function(item){
+                $.each(data, function(i, item){
                     if (item.tag == '全部')
                         html += '<a href="#" class="tag-link active">全部</a>';
                     else {
