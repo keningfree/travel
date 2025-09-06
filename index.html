@@ -42,13 +42,7 @@
             <div class="widget" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
                 <h3>標籤分類</h3>
                 <div class="tags-cloud">
-                    <a href="#" class="tag-link active">全部</a>
-                    <a href="#" class="tag-link">日本 (5)</a>
-                    <a href="#" class="tag-link">歐洲 (3)</a>
-                    <a href="#" class="tag-link">親子 (2)</a>
-                    <a href="#" class="tag-link">美食 (4)</a>
-                    <a href="#" class="tag-link">文化 (6)</a>
-                    <a href="#" class="tag-link">攝影 (3)</a>
+
                 </div>
             </div>
           </aside>
@@ -171,7 +165,16 @@
             method: 'GET',
             dataType: 'json',
             success: function(data) {
-                console.log('成功：', data);
+                let html = '';
+                $.each(data, function(item){
+                    if (item.tag == '全部')
+                        html += '<a href="#" class="tag-link active">全部</a>';
+                    else {
+                        html += '<a href="#" class="tag-link">' + item.tag + '(' + item.count + ')</a>';
+                    }
+                });
+
+                $('.tags-cloud').append(html);
             }
         });
     </script>
